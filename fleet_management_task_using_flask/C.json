@@ -1,0 +1,15 @@
+{
+    "name": "datagen-Csection-section",
+    "config": {
+      "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+      "kafka.topic": "section_ABC",
+      "schema.filename": "/home/appuser/sectionC.json",
+      "schema.keyfield": "section",
+      "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable": "false",
+      "max.interval": 1000,
+      "iterations": 100,
+      "tasks.max": "1"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "file-source-connector",
+    "config": {
+        "connector.class": "com.github.jcustenborder.kafka.connect.spooldir.SpoolDirJsonSourceConnector",
+        "tasks.max": "1",
+        "input.path": "/home/appuser/vehicle",
+    	"input.file.pattern": ".*\\.json",
+	"schema.generation.enabled": "true",
+    	"error.path": "/home/appuser",
+	"finished.path": "/home/appuser/backup",
+        "topic": "vehicle-location",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter.schemas.enable": "false"
+    }
+}

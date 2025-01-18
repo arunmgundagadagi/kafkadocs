@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "SensorData",
+  "fields": [
+    {"name": "vehicle_id", "type": "int"},
+    {"name": "engine_temperature", "type": "int"},
+    {"name": "engine_rotation", "type": "int"},
+    {"name": "timestamp", "type": "long"}
+  ]
+}
