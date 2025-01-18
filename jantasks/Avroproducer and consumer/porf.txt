@@ -1,0 +1,14 @@
+kafka-producer-perf-test --topic ArunTopic   --num-records 100000   --record-size 100   --throughput 1000 --producer-props bootstrap.servers=localhost:9092
+
+kafka-consumer-perf-test --topic ArunTopic   --broker-list localhost:9092   --messages 71602 --group test-group
+
+kafka-producer-perf-test   --topic ArunTopic   --num-records 100000   --record-size 500   --throughput 65   --producer-props   bootstrap.servers=localhost:9092   batch.size=3276   linger.ms=5 compression.type=snappy
+
+http://localhost:8081/subjects/avro-topic-value/versions
+
+
+kafka-topics --create --bootstrap-server localhost:9092 --topic Aruntopic --partitions 1 --relpication-factor 1
+
+kafka-topics --list --bootstrap-server localhost:9092
+
+kafka-console-consumer --list --bootstrap-server localhost:9092 --topic Aruntopic --from-beginning

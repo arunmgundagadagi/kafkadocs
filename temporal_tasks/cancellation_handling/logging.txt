@@ -1,0 +1,8 @@
+WARNING:root:Workflow for order order-12345 canceled. Cleaning up.
+WARNING:root:Workflow for order order-12345 canceled. Cleaning up.
+INFO:root:Processing order order-12345
+INFO:root:Waiting for additional steps on order order-12345
+WARNING:root:Workflow for order order-12345 canceled. Cleaning up.
+INFO:root:Cleaning up order order-12345
+INFO:temporalio.worker._worker:Worker cancelled, shutting down
+INFO:temporalio.worker._worker:Beginning worker shutdown, will wait 0:00:00 before cancelling activities

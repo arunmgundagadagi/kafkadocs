@@ -1,0 +1,185 @@
+{
+    "name": "section_A_schema",
+    "type": "record",
+    "fields": [
+        {
+            "name": "name",
+            "type": {
+                "type": "enum",
+                "name": "NameEnum",
+                "symbols": [
+                    "Alice",
+                    "Bob",
+                    "Charlie",
+                    "David",
+                    "Eve",
+                    "Frank",
+                    "Grace",
+                    "Hank",
+                    "Ivy",
+                    "Jack",
+                    "Karen",
+                    "Leo",
+                    "Mona",
+                    "Nina",
+                    "Oscar",
+                    "Paul",
+                    "Quincy",
+                    "Rachel",
+                    "Steve",
+                    "Tina",
+                    "Uma",
+                    "Victor",
+                    "Wendy",
+                    "Xavier",
+                    "Yara",
+                    "Zack",
+                    "Aaron",
+                    "Becky",
+                    "Carl",
+                    "Diana",
+                    "Ethan",
+                    "Fiona",
+                    "George",
+                    "Hannah",
+                    "Isaac",
+                    "Jasmine",
+                    "Kevin",
+                    "Linda",
+                    "Michael",
+                    "Nora",
+                    "Olivia",
+                    "Peter",
+                    "Quinn",
+                    "Rebecca",
+                    "Sam",
+                    "Tara",
+                    "Ursula",
+                    "Vincent",
+                    "Walter",
+                    "Xena",
+                    "Yasmine",
+                    "Zane",
+                    "Alan",
+                    "Betty",
+                    "Cindy",
+                    "Derek",
+                    "Emily",
+                    "Fred",
+                    "Gloria",
+                    "Harry",
+                    "Irene",
+                    "Jacob",
+                    "Kylie",
+                    "Logan",
+                    "Megan",
+                    "Nathan",
+                    "Olga",
+                    "Patrick",
+                    "Queen",
+                    "Roger",
+                    "Sophia",
+                    "Tom",
+                    "Usha",
+                    "Vanessa",
+                    "Wayne",
+                    "Xander",
+                    "Yvonne",
+                    "Zoe",
+                    "Aria",
+                    "Blake",
+                    "Carter",
+                    "Daisy",
+                    "Elliot",
+                    "Faith",
+                    "Gavin",
+                    "Hope",
+                    "Ian",
+                    "Jade",
+                    "Kai",
+                    "Liam",
+                    "Arun",
+                    "Kiran",
+                    "Pooja",
+                    "avinash",
+                    "balaji",
+                    "shriveena",
+                    "nandan",
+                    "sandesh",
+                    "shiva",
+                    "subramanya"
+                ]
+            }
+        },
+        {
+            "name": "section",
+            "type": {
+              "type": "enum",
+              "name": "SectionEnum",
+              "symbols": [
+                "A"
+              ]
+            }
+          },        
+        {
+            "name": "english",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {
+                        "min": 60,
+                        "max": 100
+                    }
+                }
+            }
+        },
+        {
+            "name": "math",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {
+                        "min": 30,
+                        "max": 50
+                    }
+                }
+            }
+        },
+        {
+            "name": "physics",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {
+                        "min": 60,
+                        "max": 100
+                    }
+                }
+            }
+        },
+        {
+            "name": "chemistry",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {
+                        "min": 30,
+                        "max": 50
+                    }
+                }
+            }
+        },
+        {
+            "name": "biology",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {
+                        "min": 60,
+                        "max": 100
+                    }
+                }
+            }
+        }
+    ]
+}

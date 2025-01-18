@@ -1,0 +1,34 @@
+--------------------docker---------------------------
+docker build -t flask-image .
+docker run -p 5000:5000 flask-image
+
+docker image  rm -f 102867451e71    (to delete the image forcibly even if it using )
+
+
+----------------------------kubernetes-------------------
+
+kubectl get pods 
+kubectl get namespaces 
+kubectl get services 
+kubectl get deployements 
+
+
+kubectl apply -f flask-pod.yml
+kubectl apply -f deployement-flask.yml
+kubectl apply -f service-flaskapp.yml
+
+kubectl delete pods --all
+kubectl delete deployments --all
+kubectl delete services flask-app-service
+
+kubectl describe pod <opod name>
+kubectl logs <podname>
+kubectl scale deployments/deploymentname --replicas=3
+--------------------------------------------
+docker login -u arunmg
+docker tag flask-image:latest arunmg/flask-image:latest
+docker push  arunmg/flask-image
+
+why deployment ????
+>>>> It provides additional features such as scaling, updates, and rollbacks
+     If a Pod crashes or is deleted, the Deployment automatically recreates it

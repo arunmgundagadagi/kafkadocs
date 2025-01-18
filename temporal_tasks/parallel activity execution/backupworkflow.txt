@@ -1,0 +1,46 @@
+from temporalio import workflow
+import asyncio
+from activityparallel import hello
+from datetime import timedelta
+
+@workflow.defn
+class OrderWorkflow:
+    @workflow.run
+    async def run(self, order_id: str) -> list:
+        # parallel execution of the activity
+        async def task1():
+            workflow.execute_activity(
+            hello.process_order,
+            order_id,
+            task_queue="order-task-queue_seq",
+            start_to_close_timeout=timedelta(seconds=20),
+        )
+            return "Order {order_id} has been processed successfully!"
+        async def task2():    
+            workflow.execute_activity(
+            hello.delivery_waiting,
+            order_id,
+            task_queue="order-task-queue_seq",
+            start_to_close_timeout=timedelta(seconds=20),
+        )
+            return f"Order {order_id} has been waiting for delivery"
+        async def task3():    
+            workflow.execute_activity(
+            hello.dispatch,
+            order_id,
+            task_queue="order-task-queue_seq",
+            start_to_close_timeout=timedelta(seconds=20),
+        )
+            return f"Order {order_id} has been dispatched"
+        async def task4():    
+            workflow.execute_activity(
+            hello.shipping,
+            order_id,
+            task_queue="order-task-queue_seq",
+            start_to_close_timeout=timedelta(seconds=20),
+        )
+            return f"Order {order_id}  shipped at xxxxxx"
+        
+        
+        result = await asyncio.gather(task1(),task2(),task3(),task4())
+        return result 
